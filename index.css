@@ -76,46 +76,10 @@ h3 {
     font-size: 20px;
 }
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
-
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 14px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
 /* ------------ Landing Part ------------------ */
 .landing-page {
     background: linear-gradient(135deg, #85e4ff 0%, #007bff 100%);
-    padding: 80px 40px;
+    padding: 120px 40px;
     text-align: center;
 }
 
@@ -137,6 +101,7 @@ h3 {
 /* ------------ Servicing Part ------------------ */
 .services {
     padding: 80px 40px;
+    border-top: 1px solid #e0e0e0;
 }
 
 .services-grid {
@@ -149,8 +114,14 @@ h3 {
 
 .card {
     padding: 32px 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
+}
+
+.card img {
+    max-height: 100%;
+    max-width:100%;
 }
 
 .card-icon {
@@ -171,6 +142,11 @@ h3 {
     color: #000;
 }
 
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -188,6 +164,7 @@ h3 {
     background-color: #f9f9f9;
     padding: 80px 20px;
     text-align: center;
+    border-top: 1px solid #e0e0e0;
 }
 
 .trusted-by-header {
@@ -215,11 +192,24 @@ h3 {
     margin: 40px auto;
 }
 
+@media (max-width: 768px) {
+    .trusted-by-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .trusted-by-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ------------ How It Works Part ------------------ */
 .how-it-works {
     padding: 80px 40px;
     background-color: #ffffff;
     text-align: center;
+    border-top: 1px solid #e0e0e0;
 }
 
 .how-it-works-header {
@@ -347,6 +337,11 @@ h3 {
     max-width: 280px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card img {
+    max-width: 100%;
+    height: auto;
 }
 
 .contact-card:hover {
